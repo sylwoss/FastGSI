@@ -12,7 +12,7 @@
 - **ADB** and **Fastboot** installed
 - **system.img** file
 - Device must be in **system** for flashing
-- **FastGSI.bat in fastboot folder!**
+- **`FastGSI.bat` and `system.img` in Fastboot folder!**
 
 # Usage
 1. Run `FastGSI.bat`.
