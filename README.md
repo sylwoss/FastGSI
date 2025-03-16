@@ -1,8 +1,7 @@
 # FastGSI
 
 **FastGSI** is a script that automates flashing a Generic System Image (GSI) to your Android device.
-
-# FastGSI.bat **MUST** be in fastboot folder!
+FastGSI.bat **MUST** be in fastboot folder!
 
 # Features
 - Automatically detects ADB and Fastboot
