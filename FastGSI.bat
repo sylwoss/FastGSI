@@ -50,7 +50,7 @@ set gsi_file=system.img
 
 if not exist "%gsi_file%" (
     echo Error: The file system.img does not exist in this folder! Please rename your GSI and try again!
-    echo if you found any errors let me know!
+    echo If you found any errors, let me know!
     pause
     exit /b
 )
@@ -63,8 +63,21 @@ fastboot delete-logical-partition product_b
 echo Flashing GSI...
 fastboot flash system "%gsi_file%"
 
-echo Data cleaning...
-fastboot erase userdata
+:choose_wipe
+echo Do you want to wipe data after flashing?
+echo 1 - Yes (fastboot -w)
+echo 2 - No
+set /p choice=Enter your choice: 
+
+if "%choice%"=="1" (
+    echo Wiping data...
+    fastboot -w
+) else if "%choice%"=="2" (
+    echo Skipping data wipe...
+) else (
+    echo Invalid choice. Please enter 1 or 2.
+    goto choose_wipe
+)
 
 echo Restarting the device...
 fastboot reboot
