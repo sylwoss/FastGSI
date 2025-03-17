@@ -2,10 +2,12 @@
 
 **FastGSI** is a script that automates flashing a Generic System Image (GSI) to your Android device.
 
+# **For the script to work properly, the phone must be in system mode (not fastboot) and have USB debugging enabled in the developer options!**
+
 # Features
 - Automatically detects ADB and Fastboot
 - Flashes `system.img`
-- Cleans up partitions and wipes data
+- Cleans partitions and deletes userdata and product, product_a, product_b
 
 # Requirements
 - **Windows OS**
