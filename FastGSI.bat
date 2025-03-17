@@ -86,6 +86,10 @@ fastboot flash system "%gsi_file%"
 echo Data cleaning...
 fastboot erase userdata
 
+:: Wipe metadata/cache
+echo Wipe metadata/cache
+fastboot -w
+
 :: Reboot the device
 echo Restarting the device...
 fastboot reboot
